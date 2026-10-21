@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -11,8 +12,13 @@ html {
 }
 
 body {
-    background-color: white;
-    color: black;
+    background-color: #050505;
+    color: lightgray;
+}
+
+h1, h2, h3, nav h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 nav {
@@ -20,15 +26,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #1a1a1a;
+    background-color: #050505;
 }
 
 nav h2 {
     font-size: 26px;
+    color: white;
+    letter-spacing: 1px;
 }
 
 span {
-    color: orangered;
+    color: gold;
 }
 
 nav ul {
@@ -39,15 +48,15 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
+    color: darkgray;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: orangered;
+    color: darkred;
 }
-
 
 .home {
     min-height: 550px;
@@ -65,65 +74,94 @@ nav ul li a:hover {
 .home-text > p:first-child {
     font-size: 18px;
     margin-bottom: 12px;
+    color: goldenrod;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .home-text h1 {
     font-size: 55px;
     margin-bottom: 12px;
+    color: white;
+    line-height: 1.2;
 }
 
 .home-text h3 {
-    font-size: 25px;
+    font-size: 22px;
     margin-bottom: 20px;
+    color: darkgray;
+    font-weight: 400;
 }
 
 .description {
-    color: gray;
+    color: darkgray;
     font-size: 16px;
     line-height: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .button {
     display: inline-block;
-    padding: 12px 20px;
-    background-color: orangered;
+    padding: 14px 25px;
+    background-color: darkred;
     color: white;
     text-decoration: none;
-    border: 1px solid orangered;
-    border-radius: 4px;
+    border: 1px solid darkred;
+    border-radius: 6px;
     margin: 5px 8px 5px 0;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: white;
-    color: orangered;
+    background-color: gold;
+    color: black;
+    border: 1px solid gold;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
 .button-outline {
-    background-color: white;
-    color: orangered;
+    background-color: transparent;
+    color: goldenrod;
+    border: 1px solid goldenrod;
 }
 
-.home-image img {
+.button-outline:hover {
+    background-color: goldenrod;
+    color: black;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* IMAGE HOVER FIX */
+.my-photo {
     width: 450px;
     height: 300px;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block; 
+    transition: all 0.4s ease;
+    cursor: pointer;
 }
 
+.my-photo:hover {
+    box-shadow: 0 0 25px red; 
+} /* <--- YAHAN BRACKET CLOSE KIYA HAI */
 
 .section {
-    padding: 70px 8%;
+    padding: 80px 8%;
 }
 
 .heading {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .heading h2 {
-    font-size: 35px;
+    font-size: 36px;
     margin-bottom: 10px;
+    color: white;
+    letter-spacing: 1px;
 }
 
 .heading p {
@@ -131,30 +169,35 @@ nav ul li a:hover {
     font-size: 15px;
 }
 
-
 .about-content {
     max-width: 800px;
     margin: auto;
-    padding: 30px;
-    border: 1px solid rgb(233, 124, 16);
-    border-radius: 5px;
+    padding: 35px;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    background-color: #0a0a0a;
+    transition: border-color 0.3s ease;
+}
+
+.about-content:hover {
+    border-color: goldenrod;
 }
 
 .about-content h3 {
-    font-size: 23px;
+    font-size: 24px;
     margin-bottom: 15px;
+    color: goldenrod;
 }
 
 .about-content p {
-    color: gray;
+    color: darkgray;
     font-size: 15px;
     line-height: 28px;
     margin-bottom: 12px;
 }
 
-
 .skills-section {
-    background-color: white;
+    background-color: #050505;
 }
 
 .skills {
@@ -166,17 +209,28 @@ nav ul li a:hover {
 .skill {
     flex: 1;
     max-width: 300px;
-    padding: 30px 20px;
-    background-color: white;
-    border: 1px solid rgb(233, 124, 16);
-    border-radius: 5px;
+    padding: 35px 25px;
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-8px);
+    border-color: darkred;
+    box-shadow: 0 10px 20px rgba(204, 0, 0, 0.15);
 }
 
 .skill h3 {
-    color: orangered;
+    color: white;
     font-size: 22px;
     margin-bottom: 12px;
+}
+
+.skill:hover h3 {
+    color: darkred;
 }
 
 .skill p {
@@ -184,7 +238,6 @@ nav ul li a:hover {
     font-size: 14px;
     line-height: 24px;
 }
-
 
 .projects {
     display: flex;
@@ -194,109 +247,120 @@ nav ul li a:hover {
 
 .project {
     flex: 1;
-    padding: 25px;
-   border: 1px solid rgb(233, 124, 16);
-    border-radius: 5px;
+    padding: 30px;
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: goldenrod;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
 }
 
 .project h3 {
     font-size: 20px;
     margin-bottom: 15px;
+    color: white;
 }
 
 .project p {
-    color: gray;
+    color: darkgray;
     font-size: 14px;
     line-height: 25px;
 }
 
 .project .technology {
-    color: orangered;
-    margin-top: 15px;
-    font-weight: bold;
+    color: darkred;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
 }
-
-.project-note {
-    text-align: center;
-    color: gray;
-    font-size: 12px;
-    margin-top: 25px;
-}
-
 
 .education-section {
-    background-color: white;
+    background-color: #050505;
 }
 
 .education {
     max-width: 650px;
     margin: auto;
-    padding: 30px;
-    background-color: white;
-    border: 1px solid rgb(233, 124, 16);
+    padding: 35px;
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.education:hover {
+    border-color: goldenrod;
 }
 
 .education h3 {
     font-size: 22px;
     margin-bottom: 12px;
+    color: white;
 }
 
 .education p {
-    color: gray;
+    color: darkgray;
     font-size: 15px;
     line-height: 28px;
 }
 
 .education .institute {
-    color: orangered;
-    font-weight: bold;
+    color: goldenrod;
+    font-weight: 600;
 }
-
 
 .contact {
     max-width: 650px;
     margin: auto;
-    padding: 35px;
-    border: 1px solid rgb(233, 124, 16);
+    padding: 40px;
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.contact:hover {
+    border-color: darkred;
 }
 
 .contact h3 {
-    font-size: 25px;
+    font-size: 26px;
     margin-bottom: 15px;
+    color: white;
 }
 
 .contact p {
-    color: gray;
+    color: darkgray;
     font-size: 15px;
     line-height: 27px;
 }
 
 .contact .email {
-    color: black;
+    color: goldenrod;
     margin: 18px 0;
     overflow-wrap: anywhere;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
-
 
 footer {
     padding: 30px 15px;
     text-align: center;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #1a1a1a;
 }
 
 footer h3 {
     font-size: 23px;
     margin-bottom: 10px;
+    color: white;
 }
-
-footer p {
-    color: gray;
-    font-size: 13px;
-    line-height: 25px;
-}
-
 
 @media (max-width: 768px) {
     nav {
@@ -325,10 +389,10 @@ footer p {
     }
 
     .home-text h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
-    .home-image {
+    .my-photo {
         width: 250px;
         height: 250px;
     }
@@ -369,13 +433,13 @@ footer p {
         font-size: 34px;
     }
 
-    .home-image {
+    .my-photo {
         width: 210px;
         height: 210px;
     }
 
     .button {
-        padding: 11px 14px;
-        font-size: 12px;
+        padding: 12px 18px;
+        font-size: 13px;
     }
 }
