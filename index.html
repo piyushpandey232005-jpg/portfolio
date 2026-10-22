@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Piyush Pandey | Portfolio</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav>
@@ -33,7 +34,7 @@ Download Resume
 </a>
 </div>
 <div class="home-image">
-<img src="main.png" alt="Piyush Pandey" class="my-photo">
+<img src="img/main.png" alt="Piyush Pandey" class="my-photo">
 </div>
 </section>
 <section class="section" id="about">
@@ -144,10 +145,12 @@ Send Me an Email
 <footer>
 <marquee><h3>Piyush <span>Pandey</span></h3></marquee>
 </footer>
-  <script>
+</body>
+<script>
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
 });
+
 document.addEventListener('keydown', function(e) {
     if (e.key === 'F12' ||
         (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
@@ -155,6 +158,23 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 });
+
+var sections = document.querySelectorAll('.section');
+
+for (var i = 0; i < sections.length; i++) {
+    sections[i].classList.add('reveal');
+}
+
+function revealOnScroll() {
+    for (var i = 0; i < sections.length; i++) {
+        var top = sections[i].getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sections[i].classList.add('show');
+        }
+    }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 </script>
-</body>
 </html>
